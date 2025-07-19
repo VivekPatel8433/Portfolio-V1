@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cheatsheet</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; }
+        h2 { color: #333; border-bottom: 2px solid #ccc; padding-bottom: 5px; margin-top: 1.5em; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+        th { background-color: #e0f2f7; /* Light blue for headers */ }
+        .example-snippet { font-family: monospace; background-color: #db4dac; padding: 5px; border-radius: 3px; font-size: 0.9em; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+ <!--Header-->
+ <header class ="header">
+    <a href="#" class="logo">Portfolio</a>
+
+    <!--Bar from Font Awesome Website-->
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <nav class="navbar">
+       <a href="#home" class="active">Home</a> 
+       <a href="#about">About</a>
+       <a href="#services">Services</a>
+       <a href="HTML Cheatsheet.HTML">HTML Cheatsheet</a>
+       <a href="CSS Cheatsheet.HTML">CSS Cheatsheet</a>
+       <a href="Js Cheatsheet.HTML">JS Cheatsheet</a>
+       <a href="#contact">Contact</a>
+    </nav>
+ </header>
+    <h2>Basics</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Description</th>
+                <th>Example Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>On page script</td>
+                <td>Embed JavaScript directly within an HTML file.</td>
+                <td class="example-snippet"><code>&lt;script&gt; alert('Welcome to the Bookshop!'); &lt;/script&gt;</code></td>
+            </tr>
+            <tr>
+                <td>Include external JS file</td>
+                <td>Link an external JavaScript file to an HTML document.</td>
+                <td class="example-snippet"><code>&lt;script src="scripts.js"&gt;&lt;/script&gt;</code></td>
+            </tr>
+            <tr>
+                <td>Delay</td>
+                <td>Execute a function after a specified delay.</td>
+                <td class="example-snippet"><code>setTimeout(() =&gt; { alert('Book special offer!'); }, 2000);</code></td>
+            </tr>
+            <tr>
+                <td>Functions</td>
+                <td>Define reusable blocks of code.</td>
+                <td class="example-snippet"><code>function showGreeting() { alert('Welcome to Book Haven!'); } showGreeting();</code></td>
+            </tr>
+            <tr>
+                <td>Edit DOM element</td>
+                <td>Modify HTML elements.</td>
+                <td class="example-snippet"><code>document.getElementById('title').innerText = 'Book Haven Hub';</code></td>
+            </tr>
+            <tr>
+                <td>Output</td>
+                <td>Display output via console, alert, or document.</td>
+                <td class="example-snippet"><code>console.log('Books loaded successfully');</code></td>
+            </tr>
+            <tr>
+                <td>Comments</td>
+                <td>Add single-line or multi-line comments.</td>
+                <td class="example-snippet"><code>// Single-line comment<br>/* Multi-line<br>comment */</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Variables</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Description</th>
+                <th>Example Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Strict mode</td>
+                <td>Enforce stricter parsing and error handling.</td>
+                <td class="example-snippet"><code>"use strict";</code></td>
+            </tr>
+            <tr>
+                <td>Values</td>
+                <td>Store data in variables.</td>
+                <td class="example-snippet"><code>let bookPrice = 19.99;</code></td>
+            </tr>
+            <tr>
+                <td>Operators</td>
+                <td>Perform operations on variables and values.</td>
+                <td class="example-snippet"><code>let totalPrice = bookPrice + 5;</code></td>
+            </tr>
+            <tr>
+                <td>Bitwise operators</td>
+                <td>Perform bitwise operations.</td>
+                <td class="example-snippet"><code>let result = 5 &amp; 3;</code></td>
+            </tr>
+            <tr>
+                <td>Arithmetic</td>
+                <td>Perform arithmetic operations.</td>
+                <td class="example-snippet"><code>let discount = bookPrice * 0.1;</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>If-Else</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Description</th>
+                <th>Example Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>If-Else Statement</td>
+                <td>Perform conditional execution of code blocks.</td>
+                <td class="example-snippet"><code>if (bookPrice &gt; 20) {<br>  console.log('Eligible for free shipping');<br>} else if (bookPrice &gt; 10) {<br>  console.log('Shipping fee applies');<br>} else {<br>  console.log('No free shipping');<br>}</code></td>
+            </tr>
+            <tr>
+                <td>Switch statement</td>
+                <td>Perform different actions based on different conditions.</td>
+                <td class="example-snippet"><code>switch (day) {<br>  case 'Monday':<br>    console.log('Monday Deals!');<br>    break;<br>  case 'Tuesday':<br>    console.log('Tuesday Discounts');<br>    break;<br>  default:<br>    console.log('Regular Prices');<br>}</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Loops</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Description</th>
+                <th>Example Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>For Loop</td>
+                <td>Loop through a block of code a number of times.</td>
+                <td class="example-snippet"><code>for (let i = 0; i &lt; 5; i++) {<br>  console.log(i);<br>}</code></td>
+            </tr>
+            <tr>
+                <td>While Loop</td>
+                <td>Loop while a specified condition is true.</td>
+                <td class="example-snippet"><code>let i = 0;<br>while (i &lt; 5) {<br>  console.log(i);<br>  i++;<br>}</code></td>
+            </tr>
+            <tr>
+                <td>Do While Loop</td>
+                <td>Execute a block of code at least once, then loop.</td>
+                <td class="example-snippet"><code>let i = 0;<br>do {<br>  console.log(i);<br>  i++;<br>} while (i &lt; 5);</code></td>
+            </tr>
+            <tr>
+                <td>Break</td>
+                <td>Exit a loop or switch statement prematurely.</td>
+                <td class="example-snippet"><code>for (let i = 0; i &lt; 10; i++) {<br>  if (i === 3) break;<br>  console.log(i);<br>}</code></td>
+            </tr>
+            <tr>
+                <td>Continue</td>
+                <td>Skip the current iteration of a loop.</td>
+                <td class="example-snippet"><code>for (let i = 0; i &lt; 5; i++) {<br>  if (i === 3) continue;<br>  console.log(i);<br>}</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Data Types</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Description</th>
+                <th>Example Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Strict mode</td>
+                <td>Enforce stricter parsing and error handling.</td>
+                <td class="example-snippet"><code>"use strict";</code></td>
+            </tr>
+            <tr>
+                <td>Values</td>
+                <td>Store data in variables.</td>
+                <td class="example-snippet"><code>let bookPrice = 19.99;</code></td>
+            </tr>
+            <tr>
+                <td>Operators</td>
+                <td>Perform operations on variables and values.</td>
+                <td class="example-snippet"><code>let totalPrice = bookPrice + 5;</code></td>
+            </tr>
+            <tr>
+                <td>Bitwise operators</td>
+                <td>Perform bitwise operations.</td>
+                <td class="example-snippet"><code>let result = 5 &amp; 3;</code></td>
+            </tr>
+            <tr>
+                <td>Arithmetic</td>
+                <td>Perform arithmetic operations.</td>
+                <td class="example-snippet"><code>let discount = bookPrice * 0.1;</code></td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td>Represents textual data.</td>
+                <td class="example-snippet"><code>let bookTitle = "The Great Adventure";</code></td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>Represents numeric data, including integers and floating-point numbers.</td>
+                <td class="example-snippet"><code>let quantity = 5;</code></td>
+            </tr>
+            <tr>
+                <td>Boolean</td>
+                <td>Represents a logical value (true or false).</td>
+                <td class="example-snippet"><code>let isAvailable = true;</code></td>
+            </tr>
+            <tr>
+                <td>Null</td>
+                <td>Represents the intentional absence of a value.</td>
+                <td class="example-snippet"><code>let author = null;</code></td>
+            </tr>
+            <tr>
+                <td>Undefined</td>
+                <td>Indicates that a variable has not been assigned a value.</td>
+                <td class="example-snippet"><code>let genre; // genre is undefined</code></td>
+            </tr>
+            <tr>
+                <td>Object</td>
+                <td>A collection of key-value pairs.</td>
+                <td class="example-snippet"><code>let book = { title: "...", price: 19.99 };</code></td>
+            </tr>
+            <tr>
+                <td>Array</td>
+                <td>An ordered list of values.</td>
+                <td class="example-snippet"><code>let genres = ["fiction", "mystery"];</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

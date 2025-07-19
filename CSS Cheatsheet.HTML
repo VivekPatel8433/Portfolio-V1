@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheatsheet</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; }
+        h2 { color: #333; border-bottom: 2px solid #ccc; padding-bottom: 5px; margin-top: 1.5em; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #e0f2f7; /* Light blue for headers */ }
+        .example-snippet { font-family: monospace; background-color: #6bda5a; padding: 5px; border-radius: 3px; font-size: 0.9em; }
+        
+    </style>
+</head>
+<body>
+
+    <h2>Syntax and Selectors</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Description</th>
+                <th>Example Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Class selectors</td>
+                <td>Select elements with a specific class attribute.</td>
+                <td class="example-snippet"><code>.example { color: red; }</code></td>
+            </tr>
+            <tr>
+                <td>ID selectors</td>
+                <td>Select an element with a specific ID attribute.</td>
+                <td class="example-snippet"><code>#header { color: blue; }</code></td>
+            </tr>
+            <tr>
+                <td>Group of CSS selectors</td>
+                <td>Apply the same styles to multiple selectors.</td>
+                <td class="example-snippet"><code>h1, h2, p { margin: 0; }</code></td>
+            </tr>
+            <tr>
+                <td>Selector chaining</td>
+                <td>Combine selectors to target elements with multiple criteria.</td>
+                <td class="example-snippet"><code>p.important { color: green; }</code></td>
+            </tr>
+            <tr>
+                <td>CSS type selectors</td>
+                <td>Select all elements of a given type.</td>
+                <td class="example-snippet"><code>p { font-size: 16px; }</code></td>
+            </tr>
+            <tr>
+                <td>CSS class selectors</td>
+                <td>Select all elements with a specific class attribute.</td>
+                <td class="example-snippet"><code>.btn { background-color: blue; }</code></td>
+            </tr>
+            <tr>
+                <td>HTML attributes with multiple values</td>
+                <td>Select elements with specific attribute values.</td>
+                <td class="example-snippet"><code>input[type="text"] { border: 1px solid black; }</code></td>
+            </tr>
+            <tr>
+                <td>Selector specificity</td>
+                <td>Determine which selectors take precedence based on hierarchy.</td>
+                <td class="example-snippet"><p><em>(Conceptual - no direct code example)</em></p></td>
+            </tr>
+            <tr>
+                <td>CSS descendant selector</td>
+                <td>Select elements that are descendants of another element.</td>
+                <td class="example-snippet"><code>div p { color: purple; }</code></td>
+            </tr>
+            <tr>
+                <td>Link element</td>
+                <td>Link CSS stylesheets to HTML files.</td>
+                <td class="example-snippet"><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+            </tr>
+            <tr>
+                <td>Write CSS in separate files</td>
+                <td>Write CSS in separate files to maintain clean HTML.</td>
+                <td class="example-snippet"><code>/* styles.css */ body { ... }</code><br><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+            </tr>
+            <tr>
+                <td>Write CSS in HTML file</td>
+                <td>Embed CSS directly within HTML using the <code>&lt;style&gt;</code> tag.</td>
+                <td class="example-snippet"><code>&lt;style&gt; p { color: red; } &lt;/style&gt;</code></td>
+            </tr>
+            <tr>
+                <td>Inline styles</td>
+                <td>Apply styles directly within HTML elements using the <code>style</code> attribute.</td>
+                <td class="example-snippet"><code>&lt;p style="color: red; font-size: 12px;"&gt;Hello&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+                <td>Separating HTML code from CSS code</td>
+                <td>Maintain a clean separation by linking external CSS files to HTML.</td>
+                <td class="example-snippet"><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Visual Rules</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Description</th>
+                <th>Example Snippet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CSS declarations</td>
+                <td>Define styles using property-value pairs.</td>
+                <td class="example-snippet"><code>p { color: red; font-size: 16px; }</code></td>
+            </tr>
+            <tr>
+                <td>Font size</td>
+                <td>Set the size of the font.</td>
+                <td class="example-snippet"><code>p { font-size: 12px; }</code></td>
+            </tr>
+            <tr>
+                <td>Background size</td>
+                <td>Define how background images are scaled and positioned.</td>
+                <td class="example-snippet"><code>body { background-size: cover; }</code></td>
+            </tr>
+            <tr>
+                <td>Important rule</td>
+                <td>Apply higher specificity to a property value, overriding other declarations.</td>
+                <td class="example-snippet"><code>p { color: red !important; }</code></td>
+            </tr>
+            <tr>
+                <td>Opacity</td>
+                <td>Set the transparency level of an element.</td>
+                <td class="example-snippet"><code>div { opacity: 0.5; }</code></td>
+            </tr>
+            <tr>
+                <td>Font weight</td>
+                <td>Define the thickness of the text.</td>
+                <td class="example-snippet"><code>p { font-weight: bold; }</code></td>
+            </tr>
+            <tr>
+                <td>Text align</td>
+                <td>Set the horizontal alignment of text.</td>
+                <td class="example-snippet"><code>p { text-align: center; }</code></td>
+            </tr>
+            <tr>
+                <td>CSS rule set</td>
+                <td>Group declarations that apply to a set of selectors.</td>
+                <td class="example-snippet"><code>h1, p { margin: 0; color: black; }</code></td>
+            </tr>
+            <tr>
+                <td>Setting foreground text color in CSS</td>
+                <td>Define the color of the text.</td>
+                <td class="example-snippet"><code>p { color: blue; }</code></td>
+            </tr>
+            <tr>
+                <td>Resource URLs</td>
+                <td>Specify external resources like images and fonts.</td>
+                <td class="example-snippet"><code>body { background-image: url('image.png'); }</code></td>
+            </tr>
+            <tr>
+                <td>Background image</td>
+                <td>Set an image as the background of an element.</td>
+                <td class="example-snippet"><code>body { background-image: url('background.jpg'); }</code></td>
+            </tr>
+            <tr>
+                <td>Font family</td>
+                <td>Define the font or list of fonts for text content.</td>
+                <td class="example-snippet"><code>p { font-family: Arial, sans-serif; }</code></td>
+            </tr>
+            <tr>
+                <td>Color name keywords</td>
+                <td>Use color names for setting text or background colors.</td>
+                <td class="example-snippet"><code>p { color: red; }</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
